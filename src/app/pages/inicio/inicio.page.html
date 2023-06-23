@@ -1,73 +1,30 @@
 <ion-header>
   <ion-toolbar>
-    
+
     <ion-buttons slot="start">
       <ion-menu-button menu="first" color="primary"></ion-menu-button>
     </ion-buttons>
-      
-  
+
     <ion-title color="primary">Componentes</ion-title>
   </ion-toolbar>
 </ion-header>
 
-
 <ion-content>
+  
   <ion-list>
-    <ion-item *ngFor="let c of componentes | async"
-[routerLink]="c.redirectTo" detail>
-    <ion-icon [name]="c.icon" slot="start" color="primary"></ion-icon>
-    {{c.name}}
+    <ion-item *ngFor="let c of componentes | async" [routerLink]="c.redirectTo" detail>
+      <ion-icon [name]="c.icon" slot="start" color="primary"></ion-icon>
+        {{c.name}}
     </ion-item>
   </ion-list>
 
+  <ion-item>
+    <ion-avatar slot="start">
+      <img alt="Silhouette of a person's head" src="https://ionicframework.com/docs/img/demos/avatar.svg" />
+    </ion-avatar>
+    <ion-label>Jennifer Castillo Rodriguez</ion-label>
+  </ion-item>
+
+  <ion-button>Ingresar</ion-button> <ion-button [disabled]="true">Cerrar sesión</ion-button>
+
 </ion-content>
-
-<!--BUTTON-->
-<!--
-<ion-content>
-  <ion-button routerLink="/alert">
-  Alert
-  </ion-button>
-
-  <ion-button routerLink="/action-sheet">
-    Action Sheet
-  </ion-button>
-</ion-content>
-
-<ion-button>Default</ion-button>
-<ion-button fill="clear">Clear</ion-button>
-<ion-button fill="outline">Outline</ion-button>
-<ion-button fill="solid">Solid</ion-button>
-
-<ion-button>Default</ion-button>
-<ion-button color="primary">Primary</ion-button>
-<ion-button color="secondary">Secondary</ion-button>
-<ion-button color="tertiary">Tertiary</ion-button>
-<ion-button color="success">Success</ion-button>
-<ion-button color="warning">Warning</ion-button>
-<ion-button color="danger">Danger</ion-button>
-<ion-button color="light">Light</ion-button>
-<ion-button color="medium">Medium</ion-button>
-<ion-button color="dark">Dark</ion-button>
-
-AVATAR
-<ion-chip>
-  <ion-avatar>
-    <img alt="Silhouette of a person's head" src="https://ionicframework.com/docs/img/demos/avatar.svg" />
-  </ion-avatar>
-  <ion-label>Chip Avatar</ion-label>
-</ion-chip>
-
-
-<ion-item>
-  <ion-avatar slot="start">
-    <img alt="Silhouette of a person's head" src="https://ionicframework.com/docs/img/demos/avatar.svg" />
-  </ion-avatar>
-  <ion-label>Item Avatar</ion-label>
-</ion-item>
-
-<ion-avatar>
-  <img alt="Silhouette of a person's head" src="https://ionicframework.com/docs/img/demos/avatar.svg" />
-</ion-avatar>
-
--->
